@@ -1,22 +1,27 @@
+// Conteúdo do arquivo TituloDinamico.js
 class TituloDinamico extends HTMLElement {
-    constructor(){
+    constructor() {
         super();
 
-        const shadow = this.attachShadow({mode: "open"});
+        const shadow = this.attachShadow({ mode: "open" });
 
-        //base do component
+        // Verificar se o atributo "titulodocard" está presente
+        //const tituloDoCard = this.getAttribute("titulodocard") || "Default Title";
+        const tituloDoCard = this.getAttribute("titulodocard");
+
+        // Base do componente
         const componentRoot = document.createElement("h1");
-        componentRoot.textContent = "Maycon";
+        componentRoot.textContent = tituloDoCard;
 
-        //estilizar o component
+        // Estilizar o componente
         const style = document.createElement("style");
         style.textContent = `
-        h1{
-            color: red;
-        }
+            h1 {
+                color: red;
+            }
         `;
 
-        //enviar para a shadow
+        // Enviar para a sombra
         shadow.appendChild(componentRoot);
         shadow.appendChild(style);
     }

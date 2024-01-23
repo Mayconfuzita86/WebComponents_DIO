@@ -6,11 +6,10 @@
     <title>PORTAL DE NOTICIAS STAR WARS</title>
     <link rel="stylesheet" href="styles/card.css">
     <script src="src/Components/CardNews.js" defer></script>
-    <script src="src/Components/TituloDinamico.js"></script>
+    <script src="src/Components/TituloDinamico.js" defer></script>
 </head>
 <body>
-    <div class="container">
-
+    <!-- <div class="container">
         <div class="card">
             <div class="card_left">
                 <span>by Maycon Fuzita</span>
@@ -18,14 +17,19 @@
                 <p>Contratação de devs acelera buscas por Star Devs no mercado</p>
             </div>
             <div class="card_right">
-                <img src="assets\asset-vader.png">
+                <img src="assets/asset-vader.png">
             </div>
         </div>
+    </div> -->
 
-    </div>
-
-    <card-news></card-news>
-    <titulo-dinamico></titulo-dinamico>
+    <card-news
+        autor="Maycon"
+        title="Google contrata"
+        link-url="www.google.com"
+        photo="assets/asset-vader.png"
+        content="Google contrata para devs juniors"   
+    >
+    </card-news>
     
 </body>
 </html>
